@@ -16,7 +16,6 @@ def create_rewriter_agent(query: str):
     return output.content.split("</think>")[1].strip()
 
 if __name__ == "__main__":
-    # rewriter = create_rewriter_agent()
     test_query = "how 2 fix err in pythn code getting none type errorrr?"
     # We run the agent with the test query and expect a rewritten query
     rewriter = create_rewriter_agent(f"Rewrite the following query to be more clear, grammatically correct, and unambiguous: {test_query}. AND STRICTLY DO NO PRINT ANYTHING ELSE OTHER THAN RE-WRITTEN QUERY")
